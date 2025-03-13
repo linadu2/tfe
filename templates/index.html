@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>TFE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/jpeg" href="/static/favicon.jpeg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <script src="/static/model2.js"></script>
+    <script src=/static/script.js></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Présentation du TFE</h1>
+    <div id="webcam-container">
+        <p>Démarrage</p>
+    </div>
+    <details >
+        <summary>Voir les prédictions</summary>
+        <div id="label-container"></div>
+    </details>
+    <h2>Table de conversion</h2>
+    <div>
+    <table>
+        <thead>
+            <tr id="ligne">
+                <th id="bleu" >Bleu</th>
+                <th id="blanc" >Blanc</th>
+                <th id="jaune" >Jaune</th>
+                <th id="orange" >Orange</th>
+                <th id="verre" >Verre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Plastique, métal</td>
+                <td>residuels</td>
+                <td>papier</td>
+                <td>organique</td>
+                <td>Bulle a verre</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+</div>
+</body>
