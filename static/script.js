@@ -39,9 +39,9 @@ numbers = predica
     let biggest_number = 0
     let index = 0
 
-    let conv_table = ["verre", "carton", "plastique", "metal", "organique", "papier"]
+    let conv_table = ["verre", "carton", "plastique", "metal", "organique", "papier", "résuduel"]
 
-    let conv2_table = {"verre":"verre", "carton":"jaune", "plastique":"bleu", "metal":"bleu", "organique":"orange", "papier":"jaune"};
+    let conv2_table = {"verre":"verre", "carton":"jaune", "plastique":"bleu", "metal":"bleu", "organique":"orange", "papier":"jaune", "résuduel": "blanche"};
 
     for(let x in numbers){
         if(numbers[x] > biggest_number){
@@ -60,5 +60,14 @@ numbers = predica
     let column = conv2_table[conv_table[index]];
 
     highlightColumn(column);
+
+    if(column == "verre"){
+        document.getElementById('p').innerText = "A mettre dans la bulle a verre"
+    }else{
+        document.getElementById('p').innerHTML = "A mettre dans la poubelle: <span id='span'></span>"
+        document.getElementById('span').innerText=column
+    }
+
+
 }
 
